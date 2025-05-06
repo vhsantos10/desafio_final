@@ -2,7 +2,7 @@ name: Pipeline HTML Simples
 
 on:
   push:
-    branches: [ develop ]
+    branches: [ main ]
 
 jobs:
   build-deploy:
