@@ -1,0 +1,30 @@
+name: Pipeline HTML Simples
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  build-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    # Step 1 - Checkout do repositório
+    - name: Checkout do repositório
+      uses: actions/checkout@v3
+
+    # Step 2 - Verificar se o arquivo index.html existe
+    - name: Verificar index.html
+      run: |
+        if [ ! -f Index.html ]; then
+          echo "Index.html não encontrado!"
+          exit 1
+        fi
+
+    # Step 3 - Deploy para a branch gh-pages
+    - name: Deploy para GitHub Pages
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: .
+        publish_branch: gh-pages
