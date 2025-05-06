@@ -6,15 +6,17 @@ Este repositório contém a implementação de um pipeline de **build** e **depl
 
 A estrutura do projeto é bem simples:
 
-PROJETO_FINAL/
-│
-├── index.html # Página principal da aplicação
-├── .github/ # Diretório para workflows do GitHub Actions
-│ └── workflows/
-│ └── pipelines.yml # Arquivo de configuração do GitHub Actions para build e deploy
-├── README.md # Este arquivo
-└── .gitignore # Arquivo para ignorar arquivos não rastreados
+## Estrutura do Projeto
 
+A estrutura do projeto é bem simples:
+
+- **PROJETO_FINAL/**
+  - **index.html**: Página principal da aplicação
+  - **.github/**: Diretório para workflows do GitHub Actions
+    - **workflows/**
+      - **pipelines.yml**: Arquivo de configuração do GitHub Actions para build e deploy
+  - **README.md**: Este arquivo
+  - **.gitignore**: Arquivo para ignorar arquivos não rastreados
 
 ## Funcionalidade
 
